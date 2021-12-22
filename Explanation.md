@@ -1,0 +1,1 @@
+Trong index.js của pages gốc(/) mình call thẳng phương thức get tới database mà k qua 1 cái custom api viết trong file api có phương thức POST như trong newMeetup(xem file new-meetup trong pages) vì mình viết code này trong hàm getStaticProps, hàm này chạy ở server nên mình k bị lộ credential đồng thời vì nó dc viết trong đó nên nó sẽ chạy lại mỗi khi revalidate hoặc 
