@@ -38,7 +38,7 @@ export async function getStaticPaths() {//cái này có nhiệm vụ khi mà mì
 
   client.close()
   return {
-    fallback: blocking,//or true sẽ k trả về 404 mà khi cần nó sẽ tự tạo luôn trang
+    fallback: 'blocking',//or true sẽ k trả về 404 mà khi cần nó sẽ tự tạo luôn trang
     paths: meetups.map(meetup => ({
       params: {meetupId: meetup._id.toString()}//convert th id của db về dạng chuỗi để giống với id trên url khi bấm vào 1 meetup
     }))
