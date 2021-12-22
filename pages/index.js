@@ -87,7 +87,7 @@ export async function getStaticProps() {//đây là code executed trong build pr
                 id: meetup._id.toString()//đổi id do mongodb tạo về string
             }))
         },
-        revalidate: 10//nếu k dùng cái này thì nếu data mới thêm vào thì lúc nào data của mình cũng sẽ bị outdated,
+        revalidate: 1//nếu k dùng cái này thì nếu data mới thêm vào thì lúc nào data của mình cũng sẽ bị outdated,
                     //nếu như là blog nhỏ ít thay đổi thì chỉ cần build r deploy lại nhưng dự án lớn thì dùng dòng này để đảm bảo rằng
                     //là ít nhất cứ mỗi 10s nếu có request đang chạy thì nó sẽ regenerate lại trang để lấy data mới
     }//luôn trả về 1 object với cùng định dạng
